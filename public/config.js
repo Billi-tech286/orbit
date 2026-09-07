@@ -1,2 +1,2 @@
 // Set this to your deployed Render backend URL before publishing on Netlify.
-window.ORBIT_API_URL = '';
+window.ORBIT_API_URL = 'https://orbit-26q9.onrender.com';
