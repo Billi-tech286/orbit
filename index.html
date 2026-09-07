@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orbit is a guest-first space to chat, connect and watch.">
+  <title>Orbit | Chat, connect and watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="welcome-screen" class="welcome-screen">
+    <section class="welcome-panel">
+      <div class="welcome-copy-block">
+        <div class="brand-mark" aria-hidden="true"><span>O</span></div>
+        <p class="eyebrow">ORBIT / CONNECTED SPACE</p>
+        <h1>CONNECT.<br><em>CHAT. GO LIVE.</em></h1>
+        <p class="welcome-copy">A space where conversations, communities and live moments come together.</p>
+      </div>
+      <div class="welcome-actions">
+        <button id="guest-button" class="button button-primary button-wide">Continue as Guest <span>→</span></button>
+        <button id="account-button" class="button button-ghost button-wide">Create Account</button>
+      </div>
+      <p class="fine-print">Your guest identity is temporary and stays in this browser.</p>
+    </section>
+    <div class="orbit-stage" aria-hidden="true"><div class="orbit-core">O</div><div class="orbit-ring ring-a"></div><div class="orbit-ring ring-b"></div><span class="orbit-node node-chat">◌</span><span class="orbit-node node-live">●</span><span class="orbit-node node-room">□</span><span class="orbit-node node-people">✦</span></div>
+    <div class="welcome-orbit orbit-one"></div>
+    <div class="welcome-orbit orbit-two"></div>
+  </main>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#home" data-view="home"><span class="brand-dot">O</span><span>orbit</span></a>
+        <div id="profile-card" class="profile-card"></div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span>Home</button>
+        <button class="nav-item" data-view="messages"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.6 8.6 0 0 1-3.7-.8L4 20l1.5-3.5A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z"/></svg></span>Chat</button>
+        <button class="nav-item" data-view="live"><span class="nav-icon live-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/><circle cx="6" cy="12" r="1.5"/></svg></span>Live</button>
+        <button class="nav-item" data-view="rooms"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span>Rooms</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm7 3.5 2 1.2-2 3.3-2.2-.8a7.8 7.8 0 0 1-1.5.9L15 19h-6l-.3-2.4a7.8 7.8 0 0 1-1.5-.9l-2.2.8-2-3.3 2-1.2a7 7 0 0 1 0-1.9l-2-1.2 2-3.3 2.2.8a7.8 7.8 0 0 1 1.5-.9L9 5h6l.3 2.4a7.8 7.8 0 0 1 1.5.9l2.2-.8 2 3.3-2 1.2a7 7 0 0 1 0 1.9Z"/></svg></span>Settings</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span id="online-count">1 online</span></div>
+    </aside>
+
+    <div class="mobile-header"><a class="brand" href="#home" data-view="home"><span class="brand-dot">O</span><span>orbit</span></a><div id="mobile-profile"></div></div>
+    <main class="content">
+      <header class="page-header"><div><p class="eyebrow" id="page-kicker">YOUR SPACE</p><h2 id="page-title">Good to see you</h2></div><div id="header-actions"></div></header>
+      <div id="view-container"></div>
+    </main>
+    <nav class="bottom-nav" aria-label="Mobile navigation">
+      <button class="nav-item active" data-view="home"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><small>Home</small></button>
+      <button class="nav-item" data-view="messages"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.6 8.6 0 0 1-3.7-.8L4 20l1.5-3.5A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z"/></svg></span><small>Chat</small></button>
+      <button class="nav-item" data-view="live"><span class="nav-icon live-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/><circle cx="6" cy="12" r="1.5"/></svg></span><small>Live</small></button>
+      <button class="nav-item" data-view="rooms"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><small>Rooms</small></button>
+      <button class="nav-item" data-view="settings"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm7 3.5 2 1.2-2 3.3-2.2-.8a7.8 7.8 0 0 1-1.5.9L15 19h-6l-.3-2.4a7.8 7.8 0 0 1-1.5-.9l-2.2.8-2-3.3 2-1.2a7 7 0 0 1 0-1.9l-2-1.2 2-3.3 2.2.8a7.8 7.8 0 0 1 1.5-.9L9 5h6l.3 2.4a7.8 7.8 0 0 1 1.5.9l2.2-.8 2 3.3-2 1.2a7 7 0 0 1 0 1.9Z"/></svg></span><small>More</small></button>
+    </nav>
+  </div>
+
+  <div id="call-modal" class="modal hidden"><div class="modal-card"><div class="incoming-avatar" id="incoming-avatar">✦</div><p class="eyebrow">INCOMING CALL</p><h3 id="incoming-name">Someone is calling</h3><p class="muted">Audio and video are ready when you are.</p><div class="modal-actions"><button id="reject-call" class="button button-danger">Decline</button><button id="accept-call" class="button button-primary">Accept</button></div></div></div>
+  <div id="auth-modal" class="modal hidden"><div class="modal-card auth-card"><button id="close-auth" class="modal-close" aria-label="Close account dialog">×</button><p class="eyebrow" id="auth-eyebrow">OPTIONAL ACCOUNT</p><h3 id="auth-title">Create your Orbit account</h3><p id="auth-description" class="muted">Keep your profile and return to your rooms on any device.</p><form id="register-form" class="form-stack"><input id="register-username" class="input" placeholder="Username" minlength="3" maxlength="24" required><input id="register-email" class="input" type="email" placeholder="Email" required><input id="register-password" class="input" type="password" placeholder="Password (8+ characters)" minlength="8" required><button class="button button-primary" type="submit">Create account</button></form><form id="login-form" class="form-stack hidden"><input id="login-email" class="input" type="email" placeholder="Email" required><input id="login-password" class="input" type="password" placeholder="Password" required><button class="button button-primary" type="submit">Log in</button></form><button id="auth-switch" class="text-button" type="button">Already have an account? Log in</button></div></div>
+  <div id="media-dock" class="media-dock hidden"><div class="media-videos"><video id="local-video" autoplay muted playsinline></video><video id="remote-video" autoplay playsinline></video></div><div class="media-controls"><button id="mute-button" class="button button-icon" title="Mute microphone">Mic</button><button id="camera-button" class="button button-icon" title="Turn camera off">Cam</button><button id="end-call" class="button button-danger">End</button></div></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
