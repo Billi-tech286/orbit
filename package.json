@@ -1,0 +1,17 @@
+{
+  "name": "orbit-guest-chat",
+  "version": "1.0.0",
+  "description": "A small guest-first chat, rooms, calls, and live streaming app.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongodb": "^6.18.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "sqlite3": "^5.1.7"
+  }
+}
